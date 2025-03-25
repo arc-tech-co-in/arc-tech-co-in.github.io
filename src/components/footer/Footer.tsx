@@ -38,16 +38,16 @@ const footerLinks = [
 const footerSocialLinks = [
   {
     icon: <IconBrandLinkedin size={26} stroke={1.0} />,
-    href: "https://www.linkedin.com/company/arc-technologies/",
+    href: "https://www.linkedin.com/company/arc-technologies-co-in",
   },
-  {
-    icon: <IconBrandX size={26} stroke={1.0} />,
-    href: "https://twitter.com/arc_technologies",
-  },
-  {
-    icon: <IconBrandInstagram size={26} stroke={1.0} />,
-    href: "https://www.instagram.com/arc_technologies/",
-  },
+  // {
+  //   icon: <IconBrandX size={26} stroke={1.0} />,
+  //   href: "https://twitter.com/arc_technologies",
+  // },
+  // {
+  //   icon: <IconBrandInstagram size={26} stroke={1.0} />,
+  //   href: "https://www.instagram.com/arc_technologies/",
+  // },
 ];
 
 function Footer() {
@@ -84,7 +84,12 @@ function Footer() {
             </Group>
             <Group gap={"xs"}>
               {footerSocialLinks.map((item, index) => (
-                <ActionIcon key={index} variant="subtle" component="a" href={item.href}>
+                <ActionIcon
+                  key={index}
+                  variant="subtle"
+                  component="a"
+                  href={item.href}
+                >
                   {item.icon}
                 </ActionIcon>
               ))}

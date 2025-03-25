@@ -9,6 +9,7 @@ import {
   Text,
   Textarea,
   TextInput,
+  Title,
 } from "@mantine/core";
 import { IconBrandWhatsapp, IconMail, IconPhone } from "@tabler/icons-react";
 
@@ -22,14 +23,14 @@ const contactInfoItems = [
   {
     icon: <IconPhone size={26} stroke={1.0} />,
     title: "Phone",
-    description: "+91 9880424911",
-    href: "tel:+919876543210",
+    description: "+91 9740792309",
+    href: "tel:+919740792309",
   },
   {
     icon: <IconBrandWhatsapp size={26} stroke={1.0} />,
     title: "WhatsApp",
-    description: "+91 9880424911",
-    href: "https://wa.me/+919880424911",
+    description: "+91 9740792309",
+    href: "https://wa.me/+919740792309",
   },
 ];
 
@@ -76,8 +77,8 @@ function ContactUsForm() {
 function ContactUs() {
   return (
     <Container size={"lg"}>
-      <Text size={"lg"}>Contact Us</Text>
-      <Card w={"100%"} h={"100%"} p={"lg"} withBorder>
+      <Title order={2}>Contact Us</Title>
+      <Card w={"100%"} h={"100%"} p={"lg"} mt={"md"} withBorder>
         <Group
           w={"100%"}
           justify={"space-between"}

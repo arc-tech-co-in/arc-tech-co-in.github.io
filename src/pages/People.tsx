@@ -1,10 +1,11 @@
-import { Container, Title, Divider } from "@mantine/core";
+import { Container, Title, Text, Space } from "@mantine/core";
 
 function People() {
   return (
-    <Container>
-      <Title>People</Title>
-      <Divider />
+    <Container size={"lg"}>
+      <Title order={2}>People</Title>
+      <Space h={"md"} />
+      <Text size={"sm"}>Coming soon</Text>
     </Container>
   );
 }
