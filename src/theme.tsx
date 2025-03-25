@@ -7,7 +7,7 @@
 import { createTheme } from "@mantine/core";
 
 const appTheme = createTheme({
-  fontFamily: "'Mona Sans', 'Inter', 'Sofia Sans'",
+  fontFamily: "'Inter', 'Sofia Sans'",
   defaultRadius: "md",
   primaryColor: "violet",
 });

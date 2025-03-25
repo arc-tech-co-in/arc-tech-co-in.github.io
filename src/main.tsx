@@ -2,13 +2,14 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { MantineProvider } from "@mantine/core";
 import { appTheme } from "./theme.tsx";
-import { Index } from "./index.tsx";
 import "@mantine/core/styles.css";
+import { RouterProvider } from "react-router";
+import { Routes } from "./routes.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <MantineProvider theme={appTheme} defaultColorScheme="auto">
-      <Index view={"Home"} />
+      <RouterProvider router={Routes} />
     </MantineProvider>
   </StrictMode>
 );

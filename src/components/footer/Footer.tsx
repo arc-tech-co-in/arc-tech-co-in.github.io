@@ -27,11 +27,11 @@ const footerLinks = [
   },
   {
     label: "About Us",
-    href: "/about",
+    href: "/about_us",
   },
   {
     label: "Contact Us",
-    href: "/contact",
+    href: "/contact_us",
   },
 ];
 
@@ -77,14 +77,14 @@ function Footer() {
           <Stack w={"100%"} align={"flex-end"}>
             <Group gap={"sm"}>
               {footerLinks.map((item, index) => (
-                <Text key={index} size={"sm"}>
+                <Text key={index} size={"sm"} component="a" href={item.href}>
                   {item.label}
                 </Text>
               ))}
             </Group>
             <Group gap={"xs"}>
               {footerSocialLinks.map((item, index) => (
-                <ActionIcon key={index} variant="subtle">
+                <ActionIcon key={index} variant="subtle" component="a" href={item.href}>
                   {item.icon}
                 </ActionIcon>
               ))}
