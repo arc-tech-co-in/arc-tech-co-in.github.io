@@ -7,9 +7,7 @@ import {
   useMantineColorScheme,
 } from "@mantine/core";
 import {
-  IconBrandInstagram,
   IconBrandLinkedin,
-  IconBrandX,
 } from "@tabler/icons-react";
 
 const footerLinks = [

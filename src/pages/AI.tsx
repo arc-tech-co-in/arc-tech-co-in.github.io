@@ -1,4 +1,4 @@
-import { Badge, Container, Group, Title } from "@mantine/core";
+import { Badge, Container, Title } from "@mantine/core";
 import { Markdown } from "../components/Markdown";
 
 function AI() {
