@@ -30,13 +30,23 @@ function Header() {
         )}
       </Group>
       <Group gap={"sm"} align={"center"} h={"100%"}>
-        <Button variant={"light"} size={"compact-lg"}>
+        <Button
+          variant={"outline"}
+          size={"compact-lg"}
+          component="a"
+          href="/ai"
+        >
           AI
         </Button>
-        <Button variant={"light"} size={"compact-lg"}>
+        <Button
+          variant={"outline"}
+          size={"compact-lg"}
+          component="a"
+          href="/tech_blog"
+        >
           Tech Blog
         </Button>
-        <ActionIcon variant={"light"} onClick={() => toggleColorScheme()}>
+        <ActionIcon variant={"transparent"} onClick={() => toggleColorScheme()}>
           {colorScheme == "dark" ? (
             <IconSun size={20} />
           ) : (
