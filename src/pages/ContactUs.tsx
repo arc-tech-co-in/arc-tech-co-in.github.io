@@ -11,7 +11,13 @@ import {
   TextInput,
   Title,
 } from "@mantine/core";
+import { useForm } from "@mantine/form";
 import { IconBrandWhatsapp, IconMail, IconPhone } from "@tabler/icons-react";
+
+interface ContactInfoData {
+  subject: string;
+  message: string;
+}
 
 const contactInfoItems = [
   {
@@ -35,39 +41,42 @@ const contactInfoItems = [
 ];
 
 function ContactUsForm() {
+  // Form values
+  const formValues = useForm<ContactInfoData>({
+    mode: "uncontrolled",
+  });
+
   return (
     <form>
       <Stack gap={"sm"}>
-        <Group w={"100%"} justify={"space-between"}>
-          <TextInput
-            w={"48%"}
-            label="Name"
-            placeholder="Tony Stark"
-            required
-            withAsterisk
-          />
-          <TextInput
-            w={"48%"}
-            label="Email"
-            placeholder="tony@starkindustries.com"
-            required
-            withAsterisk
-          />
-        </Group>
         <TextInput
+          id="contact-subject"
           label="Subject"
           placeholder="Subject"
           required
           withAsterisk
+          key={formValues.key("subject")}
+          {...formValues.getInputProps("subject")}
         />
         <Textarea
+          id="contact-message"
           label="Message"
           placeholder="Message"
           autosize={false}
-          minRows={50}
+          key={formValues.key("message")}
+          {...formValues.getInputProps("message")}
         />
         <Group w={"100%"} justify={"flex-end"}>
-          <Button type="submit">Send Message</Button>
+          <Button
+            type="submit"
+            disabled={!formValues.isValid()}
+            component="a"
+            href={`mailto:contact@arc-tech.co.in?subject=${
+              formValues.getValues().subject
+            }&body=${formValues.getValues().message}`}
+          >
+            Send Message
+          </Button>
         </Group>
       </Stack>
     </form>
@@ -79,12 +88,7 @@ function ContactUs() {
     <Container size={"lg"}>
       <Title order={2}>Contact Us</Title>
       <Card w={"100%"} h={"100%"} p={"lg"} mt={"md"} withBorder>
-        <Group
-          w={"100%"}
-          justify={"space-between"}
-          align={"flex-center"}
-          gap={"md"}
-        >
+        <Group w={"100%"} justify={"space-between"} align={"flex-center"} gap={"md"}>
           <Card w={"28%"} p={"lg"}>
             <Stack>
               <Text fw={600}>Contact Information</Text>

@@ -15,7 +15,7 @@ function Shell(props: ShellProps) {
       footer={{ height: { base: 130, md: 140, lg: 160 } }}
       padding={"md"}
     >
-      <AppShell.Header px={'md'}>
+      <AppShell.Header px={"md"}>
         <Header />
       </AppShell.Header>
       <AppShell.Main>{props.content}</AppShell.Main>
