@@ -11,7 +11,12 @@ function Header() {
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
 
   return (
-    <Group align={"center"} justify={"space-between"} h={"100%"} p={"md"}>
+    <Group
+      align={"center"}
+      justify={"space-between"}
+      h={"100%"}
+      p={"md"}
+    >
       <Group>
         {colorScheme == "dark" ? (
           <Image

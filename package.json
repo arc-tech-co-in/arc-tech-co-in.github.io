@@ -4,6 +4,9 @@
   "version": "0.1.0",
   "homepage": "https://arc-tech-co-in.github.io",
   "type": "module",
+  "includes": [
+    "public/markdowns/**/*.md"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
