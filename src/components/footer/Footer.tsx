@@ -1,14 +1,5 @@
-import {
-  ActionIcon,
-  Group,
-  Image,
-  Stack,
-  Text,
-  useMantineColorScheme,
-} from "@mantine/core";
-import {
-  IconBrandLinkedin,
-} from "@tabler/icons-react";
+import { ActionIcon, Group, Image, Stack, Text, useMantineColorScheme } from "@mantine/core";
+import { IconBrandLinkedin } from "@tabler/icons-react";
 
 const footerLinks = [
   {
@@ -56,19 +47,9 @@ function Footer() {
       <Group justify={"space-between"} align={"center"} h={"100%"} p="md">
         <Group>
           {colorScheme === "dark" ? (
-            <Image
-              src="/images/logo_dark.png"
-              alt="ARC Technologies Light"
-              width={"75px"}
-              height={"75px"}
-            />
+            <Image src="/images/logo_dark.png" alt="ARC Technologies Light" width={"75px"} height={"75px"} />
           ) : (
-            <Image
-              src="/images/logo.png"
-              alt="ARC Technologies Dark"
-              width={"75px"}
-              height={"75px"}
-            />
+            <Image src="/images/logo.png" alt="ARC Technologies Dark" width={"75px"} height={"75px"} />
           )}
         </Group>
         <Group>
@@ -82,20 +63,14 @@ function Footer() {
             </Group>
             <Group gap={"xs"}>
               {footerSocialLinks.map((item, index) => (
-                <ActionIcon
-                  key={index}
-                  variant="subtle"
-                  component="a"
-                  href={item.href}
-                >
+                <ActionIcon key={index} variant="subtle" component="a" href={item.href}>
                   {item.icon}
                 </ActionIcon>
               ))}
             </Group>
             <Group gap={"xs"}>
               <Text size={"xs"} c={"dimmed"}>
-                © {new Date().getFullYear()} ARC Technologies. All rights
-                reserved.
+                © {new Date().getFullYear()} ARC Technologies. All rights reserved.
               </Text>
             </Group>
           </Stack>
