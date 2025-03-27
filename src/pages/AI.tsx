@@ -1,16 +1,16 @@
-import { Badge, Container, Title } from "@mantine/core";
+import { Badge } from "@mantine/core";
 import { Markdown } from "../components/Markdown";
+import { Content } from "../components/Content";
+import { Fragment } from "react/jsx-runtime";
 
-function AI() {
+export default function AI() {
   return (
-    <Container size={"lg"}>
-      <Title order={2}>AI</Title>
-      <Markdown fname={"/markdowns/ai_1.md"} />
-      <Badge radius={"sm"}>
-        Posted {new Date("03/24/2025").toLocaleDateString()}
-      </Badge>
-    </Container>
+    <Content title={"AI"}>
+      <Fragment>
+        <Markdown fname={"/markdowns/ai_1.md"} />
+        <Badge radius={"sm"}>Posted {new Date("03/24/2025").toLocaleDateString()}</Badge>
+      </Fragment>
+    </Content>
   );
 }
 
-export { AI };

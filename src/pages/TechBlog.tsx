@@ -1,13 +1,11 @@
-import { Container, Title, Space, Text } from "@mantine/core";
+import { Text } from "@mantine/core";
+import { Content } from "../components/Content";
 
-function TechBlog() {
+export default function TechBlog() {
   return (
-    <Container size={"lg"}>
-      <Title order={2}>Tech Blog</Title>
-      <Space h={"md"} />
+    <Content title={"Tech Blog"}>
       <Text size={"sm"}>Coming soon</Text>
-    </Container>
+    </Content>
   );
 }
 
-export { TechBlog };

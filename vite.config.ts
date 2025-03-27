@@ -7,5 +7,15 @@ export default defineConfig({
   server: {
     port: 15000,
   },
-  base: '/'
+  base: '/',
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          react: ['react', 'react-dom', 'react-router'],
+          mantine: ['@mantine/core', '@mantine/hooks'],
+        }
+      }
+    }
+  }
 })
