@@ -7,13 +7,7 @@ import {
   Text,
   useMantineColorScheme,
 } from "@mantine/core";
-import {
-  IconBrandInstagram,
-  IconBrandLinkedin,
-  IconBrandX,
-  IconMoon,
-  IconSun,
-} from "@tabler/icons-react";
+import { IconBrandLinkedin, IconMoon, IconSun } from "@tabler/icons-react";
 
 const footerLinks = [
   {
