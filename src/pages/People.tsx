@@ -1,13 +1,11 @@
-import { Container, Title, Text, Space } from "@mantine/core";
+import { Text } from "@mantine/core";
+import { Content } from "../components/Content";
 
-function People() {
+export default function People() {
   return (
-    <Container size={"lg"}>
-      <Title order={2}>People</Title>
-      <Space h={"md"} />
+    <Content title={"People"}>
       <Text size={"sm"}>Coming soon</Text>
-    </Container>
+    </Content>
   );
 }
 
-export { People };

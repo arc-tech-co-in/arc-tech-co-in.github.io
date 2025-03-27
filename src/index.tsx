@@ -1,4 +1,4 @@
-import { Shell } from "./components/shell/Shell";
+import { Shell } from "./components/Shell";
 import React from "react";
 
 function Index({ view }: { view: React.ReactNode }) {

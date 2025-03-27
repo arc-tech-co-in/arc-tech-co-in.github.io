@@ -1,7 +1,7 @@
 import { Center, Container, Image } from "@mantine/core";
 import { useColorScheme } from "@mantine/hooks";
 
-function Home() {
+export default function Home() {
   const [colorScheme] = useColorScheme();
 
   return (
@@ -21,4 +21,3 @@ function Home() {
   );
 }
 
-export { Home };
