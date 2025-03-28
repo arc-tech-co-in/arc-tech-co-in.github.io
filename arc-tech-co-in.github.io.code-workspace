@@ -17,6 +17,6 @@
     "workbench.preferredLightColorTheme": "GitHub Light"
   },
   "extensions": {
-    "recommendations": ["github.github-vscode-theme"]
+    "recommendations": ["github.github-vscode-theme", "unifiedjs.vscode-mdx"]
   }
 }

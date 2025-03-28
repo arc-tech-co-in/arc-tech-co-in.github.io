@@ -1,11 +1,19 @@
-import { Card } from "@mantine/core";
+import { Box } from "@mantine/core";
 import { JSX } from "react";
 
 function Heading({ text }: { text: JSX.Element }) {
   return (
-    <Card w={"100%"} p={"xs"}>
+    <Box
+      w={"100%"}
+      p={"xs"}
+      style={{
+        borderLeftWidth: "3px",
+        borderLeftStyle: "solid",
+        borderLeftColor: "var(--mantine-color-darkviolet-5)",
+      }}
+    >
       {text}
-    </Card>
+    </Box>
   );
 }
 

@@ -9,7 +9,7 @@ function Markdown({ fname }: { fname: string }) {
     fetch(`${fname}`)
       .then((res) => res.text())
       .then((text) => setMarkdown(text));
-  }, []);
+  }, [fname]);
 
   return <ReactMarkdown remarkPlugins={[remarkGfm]}>{markdown}</ReactMarkdown>;
 }
